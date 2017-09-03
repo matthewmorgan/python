@@ -1,4 +1,5 @@
 import unittest
+from unittest import skip
 
 from isogram import is_isogram
 
@@ -10,30 +11,39 @@ class TestIsogram(unittest.TestCase):
     def test_empty_string(self):
         self.assertTrue(is_isogram(""))
 
+    @skip("remove this annotation to run this test")
     def test_isogram_with_only_lower_case_characters(self):
         self.assertTrue(is_isogram("isogram"))
 
+    @skip("remove this annotation to run this test")
     def test_word_with_one_duplicated_character(self):
         self.assertFalse(is_isogram("eleven"))
 
+    @skip("remove this annotation to run this test")
     def test_longest_reported_english_isogram(self):
         self.assertTrue(is_isogram("subdermatoglyphic"))
 
+    @skip("remove this annotation to run this test")
     def test_word_with_duplicated_character_in_mixed_case(self):
         self.assertFalse(is_isogram("Alphabet"))
 
+    @skip("remove this annotation to run this test")
     def test_hypothetical_isogrammic_word_with_hyphen(self):
         self.assertTrue(is_isogram("thumbscrew-japingly"))
 
+    @skip("remove this annotation to run this test")
     def test_isogram_with_duplicated_non_letter_character(self):
         self.assertTrue(is_isogram("Hjelmqvist-Gryb-Zock-Pfund-Wax"))
 
+    @skip("remove this annotation to run this test")
     def test_made_up_name_that_is_an_isogram(self):
         self.assertTrue(is_isogram("Emily Jung Schwartzkopf"))
 
+    @skip("remove this annotation to run this test")
     def test_duplicated_character_in_the_middle(self):
         self.assertFalse(is_isogram("accentor"))
 
+    @skip("remove this annotation to run this test")
     def test_isogram_with_duplicated_letter_and_nonletter_character(self):
         self.assertFalse(is_isogram("Aleph Bot Chap"))
 
